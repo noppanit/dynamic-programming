@@ -1,12 +1,11 @@
 import sys
-coins = [1, 3, 5]
-min_coin = [sys.maxint] * 20
-min_coin[0] = 0
 
-for min_of_i in range(20):
-    for coin in coins:
-        if coin <= min_of_i and (min_coin[min_of_i - coin] + 1 < min_coin[min_of_i]):
-                min_coin[min_of_i] = min_coin[min_of_i - coin] + 1
+def get_min_coins(coins, target_amount):
+    n = len(coins)
+    min_coins = [0] + [sys.maxint] * target_amount
+    for i in range(1, n + 1):
+        for j in range(coins[i - 1], target_amount + 1):
+            min_coins[j] = min(min_coins[j - coins[i - 1]] + 1, min_coins[j])
+    return min_coins
 
-
-print min_coin
+print get_min_coins([1,3,5], 11)
