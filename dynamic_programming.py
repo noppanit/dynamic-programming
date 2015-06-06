@@ -1,12 +1,12 @@
+import sys
 coins = [1, 3, 5]
-sum = []
-sum.append(0)
+min_coin = [sys.maxint] * 20
+min_coin[0] = 0
 
-for min_of_i in range(11):
-    sum.append(1000)
+for min_of_i in range(20):
     for coin in coins:
-        if coin <= min_of_i and ( sum[min_of_i - coin] + 1 < sum[min_of_i] ):
-                sum[min_of_i] = sum[min_of_i - coin] + 1
+        if coin <= min_of_i and (min_coin[min_of_i - coin] + 1 < min_coin[min_of_i]):
+                min_coin[min_of_i] = min_coin[min_of_i - coin] + 1
 
 
-print sum
+print min_coin
