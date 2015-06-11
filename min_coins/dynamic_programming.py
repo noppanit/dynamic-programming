@@ -8,4 +8,4 @@ def get_min_coins(coins, target_amount):
             min_coins[j] = min(min_coins[j - coins[i - 1]] + 1, min_coins[j])
     return min_coins
 
-print get_min_coins([1,3,5], 11)
+print get_min_coins([5, 25, 75], 100)
