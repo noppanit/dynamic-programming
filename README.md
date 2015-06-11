@@ -3,5 +3,5 @@ This is my playground to learn dynamic programming. I'm going to try to solve di
 
 # Reference
 
-- ![Top Coder](https://www.topcoder.com/community/data-science/data-science-tutorials/dynamic-programming-from-novice-to-advanced/)
+- [Top Coder](https://www.topcoder.com/community/data-science/data-science-tutorials/dynamic-programming-from-novice-to-advanced/)
 
